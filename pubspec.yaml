@@ -1,0 +1,20 @@
+name: conscript_curator
+version: 0.1.1
+description: >
+  Conscript Curator: Weekly Example Sentence Bot for Discord Guild “Conscript Musium”
+author: Haruka Sato <as.he.that.doth.serve@gmail.com>
+homepage: https://cl-kiita.dev-pack.org/Conscript_Musium/Curator
+repository: https://github.com/CL-KIITA/Conscript_Curator
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+dependencies:
+  nyxx: ^6.7.0
+  yaml: ^3.1.3
+  cron: ^0.6.2
+  timezone: ^0.10.1
+  intl: ^0.20.2
+topics:
+  - bot
+  - discord
+  - nyxx
+publish_to: none
