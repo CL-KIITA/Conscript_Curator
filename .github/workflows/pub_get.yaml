@@ -2,7 +2,7 @@ name: Pub Get Updated Dependencies
 on:
   push:
     branches:
-      - main
+      - conla
     paths:
       - "/pubspec.yaml"
 jobs:
