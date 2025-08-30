@@ -3,7 +3,7 @@ version: 0.1.1
 description: >
   Conscript Curator: Weekly Example Sentence Bot for Discord Guild “Conscript Musium”
 author: Haruka Sato <as.he.that.doth.serve@gmail.com>
-homepage: https://cl-kiita.dev-pack.org/Conscript_Musium/Curator
+homepage: https://kiita.migdal.jp/Conscript_Musium/Curator
 repository: https://github.com/CL-KIITA/Conscript_Curator
 environment:
   sdk: ">=3.4.0 <4.0.0"
