@@ -2,7 +2,7 @@ import "package:yaml/yaml.dart";
 import "package:timezone/timezone.dart" as tz;
 import "package:timezone/data/latest.dart" as tz;
 
-import "package:conscript_curator/xlib/xlib.dart";
+import "package:conscript_curator/xlib/collection.dart";
 
 typedef XYSStore = List<XYSGroup>;
 typedef XYSTransformer<T> = T Function(XYSValue<T>);

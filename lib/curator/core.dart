@@ -6,6 +6,8 @@ import "package:week_of_year/week_of_year.dart";
 import "package:color/color.dart";
 import "package:gsheets/gsheets.dart";
 
+import "package:conscript_curator/xlib/collection.dart";
+import "package:conscript_curator/xlib/color.dart";
 import "package:conscript_curator/xlib/sys.dart";
 import "package:conscript_curator/xys/xys.dart";
 
