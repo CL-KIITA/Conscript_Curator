@@ -1,6 +1,6 @@
 import "dart:io";
 import "dart:convert";
-import "package:conscript_curator/curator.dart" show CuratorConfig;
+import "package:conscript_curator/curator/core.dart" show CuratorConfig;
 
 typedef OsCheckResult = ({bool match, OsInfo? info});
 
