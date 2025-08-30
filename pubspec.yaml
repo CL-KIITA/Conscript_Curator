@@ -16,6 +16,8 @@ dependencies:
   week_of_year: ^2.2.0
   timezone: ^0.10.1
   intl: ^0.20.2
+executables:
+  curator:
 topics:
   - bot
   - discord
