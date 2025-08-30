@@ -199,10 +199,10 @@ extension GSheetsSheets on CuratorSystem {
   Future<Spreadsheet> dbSS => this.secrets.gSheets.spreadsheet(this.config.dbId);
   Future<Worksheet> get formSheet async {
     Spreadsheet ss = await this.formSS;
-    ss.worksheetByIndex(0)!;
+    return ss.worksheetByIndex(0)!;
   }
   Future<Worksheet> get dbSheet async {
     Spreadsheet ss = await this.dbSS;
-    ss.worksheetByTitle(this.config.sheetName)!;
+    return ss.worksheetByTitle(this.config.sheetName)!;
   }
 }
