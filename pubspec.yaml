@@ -16,7 +16,7 @@ dependencies:
   week_of_year: ^2.2.0
   timezone: ^0.10.1
   intl: ^0.20.2
-  language_code: ^0.5.5
+  sealed_languages: ^2.3.0
 executables:
   curator:
 topics:

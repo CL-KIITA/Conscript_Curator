@@ -1,7 +1,7 @@
 import "package:nyxx/nyxx.dart";
 import "package:gsheets/gsheets.dart";
 import "package:intl/locale.dart";
-import "package:language_code/language_code.dart"
+import "package:sealed_languages/sealed_languages.dart"
 
 import "package:conscript_curator/xlib/general.dart";
 import "package:conscript_curator/curator/kernel.dart";
@@ -24,7 +24,7 @@ class CXSRecord {
   List<EmbedFieldBuilder> get fields {
     List<EmbedFieldBuilder> fs = <EmbedFieldBuilder>[
       EmbedFieldBuilder(name: Paren.guil.cover("例文"), value: this.example, isInline: true),
-      EmbedFieldBuilder(name: Paren.guil.cover(""), value: LanguageCodes.fromCode(this.lang.toString()).nativeName, isInline: true)];
+      EmbedFieldBuilder(name: Paren.guil.cover("言語"), value: NaturalLanguage.fromCode(this.lang.languageCode).namesNative.first, isInline: true)];
     
     if (this.translated != null) {
       fs.add(EmbedFieldBuilder(name: Paren.guil.cover("翻訳"), value: this.translated, isInline: false));
