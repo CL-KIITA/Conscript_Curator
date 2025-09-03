@@ -66,8 +66,3 @@ extension DiscordData on CuratorSystem {
     .then<GuildChannel>((List<GuildChannel> cs) => cs.where((GuildChannel c => c.id == this.config.sendChanId)).single);
 }
 
-extension MassageBuildersSettings on CuratorSystem　{
-  final bool get hasPostImage => false;
-  final bool get hasPostThumb = true;
-  final bool get hasPostFooter => true;
-}

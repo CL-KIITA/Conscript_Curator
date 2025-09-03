@@ -7,6 +7,12 @@ import "package:conscript_curator/xlib/color.dart";
 import "package:conscript_curator/curator/ref.dart";
 import "package:conscript_curator/curator/kernel.dart";
 
+extension MassageBuildersSettings on CuratorSystem　{
+  final bool get hasPostImage => false;
+  final bool get hasPostThumb = true;
+  final bool get hasPostFooter => true;
+}
+
 extension MassageBuilders on CuratorSystem {
   String get postWeekString {
     final DateTime dt = this.runAt;
