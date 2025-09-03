@@ -1,6 +1,7 @@
 import "dart:io";
 import "dart:convert";
 
+import "package:conscript_curator/xlib/general.dart";
 import "package:conscript_curator/curator/ref.dart";
 
 typedef OsCheckResult = ({bool match, OsInfo? info});
@@ -22,8 +23,6 @@ class OsInfo {
 }
 
 OsCheckResult checkOs(CuratorConfig conf, [bool test = false]) {
-  const ls = LineSplitter();
-
   if(!Platform.isLinux) {
     return (match: test && Platform.isWindows, info: null);
   }
@@ -37,14 +36,5 @@ OsCheckResult checkOs(CuratorConfig conf, [bool test = false]) {
 
       return (match: (osrt["name"]! != conf.runOn),
         info: (osrt["name"]!.toLowerCase() == "almalinux" ? OsInfo.parse(Process.runSync("cat", <String>["/etc/almalinux-release"]) as String): null));
-  }
-}
-
-extension StringNuked on String {
-  String toNuked({String start = "", String? end}){
-    if(this.startsWith(start) && this.endsWith(end ?? start)){
-      return this.substring(start.length, this.length - end.length);
-    }
-    throw FormatException("the string must starts \"$start\" and ends \"$end\", but input is not.", this);
   }
 }
