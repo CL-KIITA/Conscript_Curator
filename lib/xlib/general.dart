@@ -15,11 +15,14 @@ class Paren {
     this.open = symbol,
     this.close = symbol;
   
+  String cover(String text) => "${this.open}$text${this.close}";
+  
   static const curl = const Paren("{", "}");
   static const square = const Paren("[", "]");
   static const quot = const Paren.sym(quot);
   static const angle = const Paren("<", ">");
   static const round = const Paren("(", ")");
+  static const guil = const Paren("«", "»");
 }
 
 extension StringNuked on String {
