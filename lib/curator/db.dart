@@ -58,7 +58,7 @@ class CXSRecord {
   static CXSRecord get beta = CXSRecord(
     example: "愛・希望　君の言葉を　この胸に$nl　今日を明日を　歩みゆく",
   　lang: CXSRecord.defaultLang,
-  　note: "本例における“愛”はアガペー(el: ἀγάπη, la: caritas, en: charity)と(el: , la: , en: love)の、“君”は恋慕の相手(恋人或いはパートナー)と主イエスのダブルミーニングである",
+  　note: "本例における“愛”はアガペー (el: ἀγάπη, la: caritas, en: charity) と ストルゲー/エロース(el: στοργή/έρως, la: amor, en: love)の、“君”は恋慕の相手 (恋人或いはパートナー) と主イエスのダブルミーニングである",
   　contributor: "佐藤 陽花");
   
   static Locale defaultLang => Locale.parse("ja");
