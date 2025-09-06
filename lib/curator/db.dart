@@ -8,16 +8,21 @@ import "package:conscript_curator/curator/kernel.dart";
 import "package:conscript_curator/curator/sheet.dart";
 import "package:conscript_curator/curator/massage.dart";
 
+
 class CXSRecord {
   final String example;
   final String lang;
   final String? translated;
+  final String? note;
+  final String? reference;
   final String? contributor;
   
   CXSRecord({
     required this.example,
     Locale? lang,
     this.translated,
+    this.note,
+    this.reference,
     this.contributor}):
     this.lang = lang ?? CXSRecord.defaultLang;
   
@@ -33,6 +38,14 @@ class CXSRecord {
     if (this.contributor != null) {
       fs.add(EmbedFieldBuilder(name: Paren.guil.cover("提供"), value: this.contributor, isInline: this.translated != null));
     }
+    
+    if (this.note != null) {
+      fs.add(EmbedFieldBuilder(name: Paren.guil.cover("補足"), value: this.note, isInline: false));
+    }
+    
+    if (this.reference != null) {
+      fs.add(EmbedFieldBuilder(name: Paren.guil.cover("出典"), value: this.reference, isInline: false));
+    }
     return fs;
   }
   
@@ -40,9 +53,14 @@ class CXSRecord {
     return CXSRecord.beta;
   }
   
+  static const List<SheetLabel> labels = <SheetLabel>[];
+  
   static CXSRecord get beta = CXSRecord(
     example: "愛・希望　君の言葉を　この胸に$nl　今日を明日を　歩みゆく",
-  　lang: ,
+  　lang: CXSRecord.defaultLang,
+  　note: "本例における“愛”はアガペー(el: ἀγάπη, la: caritas, en: charity)と(el: , la: , en: love)の、“君”は恋慕の相手(恋人或いはパートナー)と主イエスのダブルミーニングである",
   　contributor: "佐藤 陽花");
+  
   static Locale defaultLang => Locale.parse("ja");
+  
 }
