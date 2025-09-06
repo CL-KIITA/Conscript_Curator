@@ -24,7 +24,7 @@ extension GSheetsSheets on CuratorSystem {
     return ss.worksheetByTitle(this.config.sheetName)!;
   }
 }
-extension on Worksheet {
+extension RawLineRecordsEx on Worksheet {
   Future<List<List<Cell>>> loadLines({
     Iterable<SheetLabel>? labels
     Range? colRange,
